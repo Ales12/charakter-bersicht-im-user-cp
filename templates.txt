@@ -1,0 +1,44 @@
+// usercp_charaview
+<html>
+<head>
+<title>{$mybb->settings['bbname']} - Deine Charakterübersicht</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<table width="100%" border="0" align="center">
+<tr>
+{$usercpnav}
+<td valign="top">
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+		<tr><td class="thead"><div class="headline">Charakterübersicht</div></td>
+		</tr>	
+	<tr><td>{$charas_bit}</td></tr>
+	</table>
+	</td>
+</tr>
+</table>
+
+{$footer}
+</body>
+</html>
+
+//usercp_charaview_bit
+<div class="mitglied"><div class="username" style="text-align: center; padding-top: 0;">{$chara_name}</div>
+	<div align="center">{$chara_avatar}</div>
+
+	<div style="text-align: center;">
+		<div class="infos"><i class="fas fa-birthday-cake"></i> {$age}</div>
+		<div class="infos"><i class="fas fa-ruler-vertical"></i> {$height}</div>
+		<div class="infos"><i class="far fa-eye"></i> {$eyes}</div>
+	<div class="infos"><i class="fas fa-tint"></i> {$blood}</div>
+			<div class="infos"><i class="fas fa-heart"></i> {$relation} <if $loveintrest then>
+	<if $relation == "Verliebt" OR $relation == "unglücklich Verliebt" then>in {$loveintrest}<else>
+		mit {$loveintrest}</if></if></div>
+		{$special}
+		<div class="infos"><i class="fas fa-brain"></i> {$attitude}</div>
+			<div class="infos">{$work} {$school}</div>
+		{$membership}
+		{$charaarea}
+	</div>
+</div>
